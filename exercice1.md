@@ -31,4 +31,4 @@ Ce exercice vise à évaluer votre compréhension et votre maîtrise des command
 
 5. **Copie du résultat sur la machine locale :**
    - Depuis votre terminal local, utilisez la commande Docker pour copier le fichier modifié depuis le container vers votre machine locale, dans un répertoire de votre choix.
-   # cp toto:/docker/README.md C:\Users\Administrateur\Desktop\docker\
+   # docker cp toto:/docker/README.md C:\Users\Administrateur\Desktop\docker\
