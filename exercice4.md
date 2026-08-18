@@ -31,26 +31,22 @@
 
 
 - Récupérer une image docker nginx.
-
+    # docker pull nginx
 - Créer un conteneur en vous basant sur cette image en lui attribuant le nom suivant : « nginx-web».
-
 - Assurez-vous que l’image est bien présente et que le conteneur est bien lancé.
-
 - Ce serveur nginx web (nginx-web) devra être lancé sur un port disponible.
-
+    # docker run -itd -p 8080:80 --name nginx-web -v /c/Users/Administrateur/Desktop/docker/exercice4:/usr/share/nginx/html nginx
+    # docker ps && docker images
 - Vérifier que le serveur est bien lancé au travers du navigateur.
-
 - Une page web avec «Welcome to nignx » devrait s'afficher (voir nginx.png). 
-
 - Effectuer la commande vous permettant de rentrer à l’intérieur de votre serveur nginx.
-
-- Une fois à l’intérieur, aller modifier la page html par défaut de votre serveur nginx en changeant le titre de la page en :  
+    # docker exec -it nginx-web bash
+- Une fois à l’intérieur, aller modifier la page html par défaut de votre serveur nginx en changeant le titre de la page en:
 Welcome «votre prenom ».
-
+    # nano usr/share/nginx/html/index.html
 - Relancez votre serveur et assurez-vous que le changement à bien été pris en compte, en relançant votre navigateur.
-
 - Refaite la même opération mais en utilisant le serveur web apache et donc il faudra créer un autre conteneur.
-
+ 
 - Il faut supprimer le contenu complet de l'index.html et y mettre : "Je suis heureux et je m'appelle votre prenom".
 
 - Le changement doit appaître dans votre navigateur.
