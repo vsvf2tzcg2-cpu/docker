@@ -48,12 +48,12 @@ Welcome «votre prenom ».
     # nano usr/share/nginx/html/index.html
 - Relancez votre serveur et assurez-vous que le changement à bien été pris en compte, en relançant votre navigateur.
 - Refaite la même opération mais en utilisant le serveur web apache et donc il faudra créer un autre conteneur.
- # docker run -itd -p 8083:80 --name apache-web apache/airflow standalone
+ # docker run -itd -p 8083:80 --name apache-web apache/airflow
  # docker exec -it apache-web bash
 - Il faut supprimer le contenu complet de l'index.html et y mettre : "Je suis heureux et je m'appelle votre prenom".
  # apt update -y && apt upgrade -y
  # apt install nano -y
- # 
+ # nano /usr/local/apache2/htdocs/index.html
 - Le changement doit appaître dans votre navigateur.
 
 ## Partie 3
@@ -62,11 +62,11 @@ Welcome «votre prenom ».
 - Répétez 3 fois la même opération que pour le début de la partie 2, il faudra juste appelez vos conteneurs :
 
 - « nginx-web3 ».
-
+    # docker run -itd -p 5001:80 --name nginx-web3 nginx
 - « nginx-web4 ».
-
+    # docker run -itd -p 5002:80 --name nginx-web4 nginx
 - « nginx-web5 ».
-
+    # docker run -itd -p 5003:80 --name nginx-web5 nginx
 - Il faudra faire en sorte que les pages html présente dans les fichiers ci-dessous s’affiche dans chacun des navigateurs en lien avec vos conteneurs :
 
 - html5up-editorial-m2i.zip pour nginx-web3
