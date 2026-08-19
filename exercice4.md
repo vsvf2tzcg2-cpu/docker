@@ -70,7 +70,7 @@ Welcome «votre prenom ».
 - Il faudra faire en sorte que les pages html présente dans les fichiers ci-dessous s’affiche dans chacun des navigateurs en lien avec vos conteneurs :
 
 - html5up-editorial-m2i.zip pour nginx-web3
- # docker cp /c/Users/Administrateur/Desktop/LAHO_2026-07-06_Admin-Cloud/05-Docker/exercice_bis/files_tp_conteneur/html5up-editorial-m2i./html5up-editorial/. nginx-web3:/usr/share/nginx/html/
+ # docker cp /c/Users/Administrateur/Desktop/LAHO_2026-07-06_Admin-Cloud/05-Docker/exercice_bis/files_tp_conteneur/html5up-editorial-m2i/html5up-editorial/. nginx-web3:/usr/share/nginx/html/
 - html5up-massively.zip pour nginx-web4
     # docker cp /c/Users/Administrateur/Desktop/LAHO_2026-07-06_Admin-Cloud/05-Docker/exercice_bis/files_tp_conteneur/html5up-massively/. nginx-web4:/usr/share/nginx/html/
 - html5up-paradigm-shift.zip pour nginx-web5
