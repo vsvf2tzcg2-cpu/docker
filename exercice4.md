@@ -48,8 +48,11 @@ Welcome «votre prenom ».
     # nano usr/share/nginx/html/index.html
 - Relancez votre serveur et assurez-vous que le changement à bien été pris en compte, en relançant votre navigateur.
 - Refaite la même opération mais en utilisant le serveur web apache et donc il faudra créer un autre conteneur.
- # docker run -it -p 8083:80 --name apache-web apache/airflow
+ # docker run -itd -p 8083:80 --name apache-web apache/airflow standalone
+ # docker exec -it apache-web bash
 - Il faut supprimer le contenu complet de l'index.html et y mettre : "Je suis heureux et je m'appelle votre prenom".
+ # apt update -y && apt upgrade -y
+ # apt install nano -y
  # 
 - Le changement doit appaître dans votre navigateur.
 
