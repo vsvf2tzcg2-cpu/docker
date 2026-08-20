@@ -9,7 +9,7 @@ services:
     environment:
     # determine le mots de passe de la bdd
       POSTGRES_PASSWORD: exemple
-# service permettant d'aministrer postgressql
+# service permettant d'administrer postgressql
   adminer:
     image: adminer
     restart: always
