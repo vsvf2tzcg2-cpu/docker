@@ -1,0 +1,9 @@
+FROM caddy
+
+RUN apk update  && apk upgrade 
+RUN apk add nano  && apk add git 
+
+
+COPY ./html5up-paradigm-shift /usr/share/caddy/
+
+EXPOSE 80

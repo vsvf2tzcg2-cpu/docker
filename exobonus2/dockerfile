@@ -1,0 +1,9 @@
+FROM nginx
+
+RUN apt update -y && apt upgrade -y 
+RUN apt install nano -y && apt install git -y
+
+COPY ./html5up-massively /usr/share/nginx/html
+
+
+EXPOSE 80
