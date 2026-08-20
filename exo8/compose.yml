@@ -1,0 +1,17 @@
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    # determine la memoire utilisable dans docker compose(evite de surcharger en memoir)
+    shm_size: 128mb
+    environment:
+    # determine le mots de passe de la bdd
+      POSTGRES_PASSWORD: example
+# service permettant d'aministrer postgressql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
