@@ -8,7 +8,7 @@ services:
     shm_size: 128mb
     environment:
     # determine le mots de passe de la bdd
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: exemple
 # service permettant d'aministrer postgressql
   adminer:
     image: adminer
